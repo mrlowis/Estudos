@@ -26,9 +26,10 @@ html, body {
 
 body {
     background-image: url(/UDM/src/imagens/nora_bg.png);
+    overflow: hidden;
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 70%;
+    background-size: 75%;
     transition: background-size 1s ease;
     margin: 0;
     display: flex;
@@ -48,12 +49,16 @@ body::before {
     background-size: contain;
     position: absolute;
     z-index: 1;
-    top: 15%;
+    top: 13%;
     left: 0;
 }
 
+body::after {
+    
+}
+
 body:hover {
-    /*background-size: 80%;*/
+    background-size: 80%;
     transition: 2.5s;
 }
 
@@ -96,12 +101,12 @@ nav {
     height: 42px;
     position: absolute;
     z-index: 1;
-    
 }
 
 .botao:hover {
     filter: drop-shadow(0px 2px 4px #c787ffa6);
     transition-duration: 0.2s;
+    height: 45px;
 }
 
 .botao_acessar .acessar {
@@ -136,8 +141,13 @@ nav {
     height: 100%;
 }
 
+.logo:hover {
+    height: 90%;
+    transition-duration: 0.1s;
+}
+
 main {
-    background-color: green;
+
     flex: 1;
     width: 80%;
     margin: auto;
@@ -151,5 +161,8 @@ footer {
 
 footer img {
     width: 80%;
-
+    position: absolute;
+    bottom: 0%;
+    left: 10%;
+    z-index: 3;
 }
