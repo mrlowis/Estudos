@@ -1,0 +1,114 @@
+/*REGRAS*/
+@charset 'UTF-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Junge&display=swap');
+
+/*VARIÁVEIS*/
+:root {
+    --cor1: #0E0B18;
+    --cor2: #1C0E20;
+    --cor_linhas: #241B2E;
+    --fonte-parágrafos: 'Junge', sans-serif ;
+    --fonte-titulos: 'Cinzel', arial, sans-serif ;
+}
+
+/*CONFIGURAÇÕES GLOBAIS*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*CONFIGURAÇÕES CONTAINERS*/
+html, body {
+    height: 100%;
+    background-color: #0E0B18;
+}
+
+body {
+    background-image: linear-gradient( 10deg, var(--cor1) 60%, var(--cor2));
+}
+
+header {
+    
+    width: auto;
+    height: 80px;
+}
+
+nav {
+    padding: 10px;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao_acessar {
+
+    height: 80%;
+    width: fit-content;
+    margin-right: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.entalhe {
+    height: 80%;
+    position: relative;
+}
+
+
+.botao {
+    height: 42px;
+    position: absolute;
+    z-index: 1;
+    
+}
+
+.botao:hover {
+    filter: drop-shadow(0px 2px 4px #c787ffa6);
+    transition-duration: 0.2s;
+}
+
+.botao_acessar .acessar {
+    height: 22px;
+    position: absolute;
+    z-index: 2;
+}
+
+.acessar:hover {
+    filter: drop-shadow(0px 0px 0.5px #c68447);
+    transition-duration: 0.1s;
+}
+
+.linha {
+    background-color: var(--cor_linhas);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.527);
+    height: 6px;
+    border-radius: 50px;
+    margin: 0px 2px;
+
+    flex: 1;
+}
+
+.logo {
+    height: 80%;
+    width: 150px;
+    margin-left: 4%;
+    text-align: center;
+}
+
+.logo img {
+    height: 100%;
+}
+
+main {
+
+}
+
+footer {
+    
+}
