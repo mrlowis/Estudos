@@ -321,6 +321,10 @@ a .side_bl{
     z-index: 1;
 }
 
+.side_bl:hover {
+    opacity: 90%;
+}
+
 a .side_br{
     opacity: 80%;
     position: absolute;
