@@ -184,7 +184,7 @@ nav {
 
 /*BOTÃO VISITANTE- SECTION*/
 .botao_visitante {
-    position: sticky;
+    position: relative;
     top: 10px;
     margin-bottom: 100px;
     z-index: 1;
@@ -193,8 +193,9 @@ nav {
 
 .botao_visitante img {
     display: block;
-    height: 68%;
+    height: 34.5%;
     padding-left: 13%;
+    position: relative;
 }
 
 .botao_visitante .entrar_como {
@@ -204,9 +205,16 @@ nav {
     color: white;
     text-decoration: none;
     position: absolute;
-    z-index: 1;
-    top: 23%;
-    left: 16%;
+    z-index: 2;
+    top: -2%;
+    left: 15.5%;
+
+    border: 1px solid rgba(255, 0, 0, 0);
+    height: 34.5%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .entrar_como::before {
@@ -215,14 +223,14 @@ nav {
     width: 200px;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0), white, rgba(255, 255, 255, 0));
     position: absolute;
-    top: 24px;
+    bottom: 35%;
 }
 
 .seta_visitante {
     position: absolute;
-    z-index: 1;
-    top: 0%;
-    left: 0%;
+    z-index: 2;
+    top: -35%;
+    left: -1%;
 }
 
 .entrar_como:hover {
@@ -387,11 +395,11 @@ a .side_br{
 }
 
 .moldura_carrossel {
-    height: 28.5vw;
-    width: 58vw;
+    height: 28vw;
+    
     position: absolute;
-    top: 1%;
-    right: -3.5%;
+    top: 2%;
+    right: -2.5%;
     pointer-events: none;
     z-index: 3;
 }
