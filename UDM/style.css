@@ -226,8 +226,8 @@ nav {
 }
 
 .entrar_como:hover {
-    scale: 1.04;
-    transition-duration: 0.5s;    
+    scale: 1.08;
+    transition-duration: 0.4s;    
 }
 
 .seta_visitante:hover {
@@ -386,8 +386,8 @@ a .side_br{
     height: 28.5vw;
     width: 58vw;
     position: absolute;
-    top: 89.5%;
-    left: 20.5%;
+    top: 1%;
+    right: -3.5%;
     pointer-events: none;
     z-index: 3;
 }
