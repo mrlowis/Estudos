@@ -14,6 +14,7 @@
     --fonte-titulos: 'Cinzel', arial, sans-serif ;
     --fonte-decorative: 'Cinzel Decorative', cursive;
     --cor-ouro: #C19456;
+    --sombras-elementos: drop-shadow(0px 0px 10px #0E0B18);
 }
 
 /*CONFIGURAÇÕES GLOBAIS*/
@@ -31,12 +32,13 @@ html, body {
     background-attachment: fixed;
 }
 
+/*BODY E BACKGROUND*/
 body {
     background-image: url(/UDM/src/imagens/nora_bg.png);
     overflow: scroll;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 82%;
+    background-size: 80%;
     transition: background-size 1s ease;
     margin: 0;
     display: flex;
@@ -64,12 +66,12 @@ body::before {
 
 
 body:hover {
-    background-size: 80%;
+    background-size: 75%;
     transition: 2.5s;
 }
 
 
-
+/*CABEÇALHO*/
 header {
     width: auto;
     height: 80px;
@@ -233,7 +235,7 @@ nav {
     transition-duration: 0.5s;
 }
 
-
+/*CONTEÚDO CENTRAL E SEÇÕES*/
 main {
     height: fit-content;
     width: 100%;
@@ -249,11 +251,12 @@ main > .section1 {
 
   justify-content: center;
   align-items: center;
-  gap: 2.604vw;
+  gap: 2vw;
   width: 100%;
+  
 }
 
-
+/*CARROSSEL*/
 .border1 {
     width: 23%;
     height: 84%;
@@ -263,6 +266,7 @@ main > .section1 {
     border-bottom: 3px solid #28242E;
     border-radius: 15px;   
 }
+
 
 
 .border3 {
@@ -275,18 +279,27 @@ main > .section1 {
     border-radius: 15px;  
 }
 
+.slide_principal {
+    height: 100%;
+    width: 60%;
+    position: relative;
+    z-index: 2;
+}
+
 .slide1 {
     height: 28.594vw;
     width: auto;
     scale: 0.99;
-
+    
     background-color: #0E0B18;
     border-top: 0.6vw solid #644A33;
     border-right: 0.6vw solid #644A33;
     border-bottom: 0.6vw solid #644A33;
     border-left: 0.4vw solid #644A33;
     border-radius: 15px;
+    z-index: 0;
 }
+
 
 .slide2 {
     height: 29.13vw;
@@ -295,6 +308,64 @@ main > .section1 {
     background-color: #0E0B18;
     border: 0.6vw solid;
     border-image: linear-gradient(to right, #644A33, #CA9567, #644A33) 1;
+    position: relative;
+    z-index: 2;
+}
+
+a .side_bl{
+    opacity: 80%;
+    position: absolute;
+    height: 8.021vw;
+    top: 35%;
+    left: -6%;
+    z-index: 1;
+}
+
+a .side_br{
+    opacity: 80%;
+    position: absolute;
+    height: 8.021vw;
+    top: 35%;
+    right: -5%;
+    z-index: 1;
+}
+
+.side_br:hover {
+    opacity: 90%;
+}
+
+.over_b_l {
+    filter: var(--sombras-elementos);
+
+    position: absolute;
+    height: 3.5vw;
+    top: 42.5%;
+    left: -2%;
+    z-index: 3;
+}
+
+.over_b_l:hover {
+    height: 3.55vw;
+    left: -3%;
+    filter: drop-shadow(5px 0px 10px rgba(66, 149, 226, 0.200));
+    transition-duration: 0.2s;
+}
+
+.over_b_r {
+    filter: var(--sombras-elementos);
+
+    position: absolute;
+    height: 3.5vw;
+    top: 42.5%;
+    right: -1%;
+    z-index: 3;
+}
+
+.over_b_r:hover {
+    height: 3.55vw;
+    right: -2%;
+    filter: drop-shadow(-5px 0px 10px rgba(66, 149, 226, 0.200));
+    transition-duration: 0.2s;
 }
 
 .slide3 {
@@ -308,6 +379,16 @@ main > .section1 {
     border-bottom: 0.6vw solid #644A33;
     border-right: 0.4vw solid #644A33;
     border-radius: 15px;
+    z-index: 0;
+}
+
+.adesivos {
+    filter: drop-shadow(0px 11px 8px #00000094);
+    position: absolute;
+    height: 36.2vw;
+    top: -10%;
+    left: -5%;
+    z-index: 2; 
 }
 
 
