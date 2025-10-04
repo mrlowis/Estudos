@@ -25,15 +25,18 @@
 /*CONFIGURAÇÕES CONTAINERS*/
 html, body {
     height: 100%;
-    background-image: linear-gradient( 10deg, var(--cor1) 60%, var(--cor2));
+    background-image: linear-gradient( 10deg, var(--cor1) 60%, #0E0B18,  var(--cor2));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 body {
     background-image: url(/UDM/src/imagens/nora_bg.png);
     overflow: scroll;
-    background-position: center center;
+    background-position: bottom center;
     background-repeat: no-repeat;
-    background-size: 75%;
+    background-size: 82%;
     transition: background-size 1s ease;
     margin: 0;
     display: flex;
@@ -151,8 +154,8 @@ nav {
 
 /*TÍTULO E DESCRIÇÃO*/
 .title_container {
-    margin: 12% auto 15px;
-    width: 72%;
+    margin: 16% auto 25px;
+    width: 73%;
     
     display: flex;
     flex-direction: column;
@@ -181,9 +184,10 @@ nav {
 .botao_visitante {
     position: sticky;
     top: 10px;
-    
+    margin-bottom: 190px;
     z-index: 1;
 }
+
 
 .botao_visitante img {
     display: block;
@@ -212,6 +216,13 @@ nav {
     top: 24px;
 }
 
+.seta_visitante {
+    position: absolute;
+    z-index: 1;
+    top: 0%;
+    left: 0%;
+}
+
 .entrar_como:hover {
     scale: 1.04;
     transition-duration: 0.5s;    
@@ -222,27 +233,69 @@ nav {
     transition-duration: 0.5s;
 }
 
-.seta_visitante {
-    position: absolute;
-    z-index: 1;
-    top: 0%;
-    left: 0%;
-}
 
 main {
-    background-color: green;
+
     width: 100%;
     margin: auto;
     z-index: 2;
     flex: 1;
 }
 
-section {
+.section1 {
     margin: 100px auto 100px;
-    background-color: red;
-    height: 400px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 700px;
     width: 100%;
 }
+
+.border1 {
+    width: 23%;
+    height: 81%;
+    
+    border-top: 3px solid #28242E;
+    border-right: 3px solid #28242E;
+    border-bottom: 3px solid #28242E;
+    border-radius: 15px;   
+}
+
+
+.border3 {
+    width: 23%;
+    height: 80%;
+    
+    border: 3px solid #28242E;
+    
+    border-radius: 15px;  
+}
+
+.slide1 {
+    height: 549px;
+    width: auto;
+    scale: 0.98;
+
+    
+    border-top: 8px solid #644A33;
+    border-right: 10px solid #644A33;
+    border-bottom: 8px solid #644A33;
+    border-left: 6px solid #644A33;
+    border-radius: 15px;
+}
+
+.slide2 {
+    height: 549px;
+    width: 976px;
+    scale: 0.98;
+    
+    border: 10px solid;
+    border-image: linear-gradient(to right, #644A33, #CA9567, #644A33) 1;
+}
+
 
 footer {
     display: flex;
