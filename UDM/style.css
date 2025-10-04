@@ -34,7 +34,7 @@ html, body {
 body {
     background-image: url(/UDM/src/imagens/nora_bg.png);
     overflow: scroll;
-    background-position: bottom center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: 82%;
     transition: background-size 1s ease;
@@ -184,7 +184,7 @@ nav {
 .botao_visitante {
     position: sticky;
     top: 10px;
-    margin-bottom: 190px;
+    margin-bottom: 100px;
     z-index: 1;
 }
 
@@ -235,28 +235,28 @@ nav {
 
 
 main {
-
+    height: fit-content;
     width: 100%;
     margin: auto;
     z-index: 2;
-    flex: 1;
+
 }
 
-.section1 {
-    margin: 100px auto 100px;
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    height: 700px;
-    width: 100%;
+main > .section1 {
+
+  margin: 0 auto 100px;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  gap: 2.604vw;
+  width: 100%;
 }
+
 
 .border1 {
     width: 23%;
-    height: 81%;
+    height: 84%;
     
     border-top: 3px solid #28242E;
     border-right: 3px solid #28242E;
@@ -267,33 +267,47 @@ main {
 
 .border3 {
     width: 23%;
-    height: 80%;
+    height: 84%;
     
-    border: 3px solid #28242E;
-    
+    border-top: 3px solid #28242E;
+    border-left: 3px solid #28242E;
+    border-bottom: 3px solid #28242E;
     border-radius: 15px;  
 }
 
 .slide1 {
-    height: 549px;
+    height: 28.594vw;
     width: auto;
-    scale: 0.98;
+    scale: 0.99;
 
-    
-    border-top: 8px solid #644A33;
-    border-right: 10px solid #644A33;
-    border-bottom: 8px solid #644A33;
-    border-left: 6px solid #644A33;
+    background-color: #0E0B18;
+    border-top: 0.6vw solid #644A33;
+    border-right: 0.6vw solid #644A33;
+    border-bottom: 0.6vw solid #644A33;
+    border-left: 0.4vw solid #644A33;
     border-radius: 15px;
 }
 
 .slide2 {
-    height: 549px;
-    width: 976px;
+    height: 29.13vw;
+    width: 51.787vw;
     scale: 0.98;
-    
-    border: 10px solid;
+    background-color: #0E0B18;
+    border: 0.6vw solid;
     border-image: linear-gradient(to right, #644A33, #CA9567, #644A33) 1;
+}
+
+.slide3 {
+    height: 28.594vw;
+    width: auto;
+    scale: 0.99;
+
+    background-color: #0E0B18;
+    border-top: 0.6vw solid #644A33;
+    border-left: 0.6vw solid #644A33;
+    border-bottom: 0.6vw solid #644A33;
+    border-right: 0.4vw solid #644A33;
+    border-radius: 15px;
 }
 
 
