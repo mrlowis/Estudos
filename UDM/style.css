@@ -34,42 +34,39 @@ html, body {
 
 /*BODY E BACKGROUND*/
 body {
+    height: 100%;
     background-image: url(/UDM/src/imagens/nora_bg.png);
     overflow: scroll;
-    background-position: center;
+    background-position: bottom center;
     background-repeat: no-repeat;
+    background-attachment: local;
     background-size: 80%;
-    transition: background-size 1s ease;
+    transition: background-size 1s linear;
     margin: 0;
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 0;
     
+    
 }
+
 
 body::before {
     content: "";
     width: 100%;
     height: 100%;
     background-image: url(/UDM/src/imagens/Moldura_Topo.svg);
-    background-position: center;
+    background-position: bottom center;
     background-repeat: no-repeat;
-    background-attachment: cover;
+    background-attachment: contain;
     background-size: contain;
     position: absolute;
     z-index: 1;
     top: 13%;
     left: 0;
+    
 }
-
-
-
-body:hover {
-    background-size: 75%;
-    transition: 2.5s;
-}
-
 
 /*CABEÇALHO*/
 header {
@@ -150,8 +147,8 @@ nav {
 }
 
 .logo:hover {
-    height: 90%;
-    transition-duration: 0.1s;
+    height: 88%;
+    transition-duration: 0.5s;
 }
 
 /*TÍTULO E DESCRIÇÃO*/
@@ -164,6 +161,13 @@ nav {
     justify-content: start;
     align-items: start;
     z-index: 1;
+
+    transition-duration: 0.5s;
+}
+
+.title_container:hover {
+    scale: 1.02;
+    transition-duration: 0.3s;
 }
 
 
@@ -207,8 +211,8 @@ nav {
     position: absolute;
     z-index: 2;
     top: -2%;
-    left: 15.5%;
-
+    left: 16%;
+    
     border: 1px solid rgba(255, 0, 0, 0);
     height: 34.5%;
     width: auto;
@@ -230,8 +234,10 @@ nav {
     position: absolute;
     z-index: 2;
     top: -35%;
-    left: -1%;
+    left: -0.2%;
 }
+
+
 
 .entrar_como:hover {
     scale: 1.08;
@@ -252,7 +258,7 @@ main {
 
 }
 
-main > .section1 {
+.section1 {
 
   margin: 0 auto 100px;
   display: flex;
@@ -262,6 +268,7 @@ main > .section1 {
   gap: 2vw;
   width: 100%;
   
+  filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.15));
 }
 
 /*CARROSSEL*/
@@ -272,7 +279,8 @@ main > .section1 {
     border-top: 3px solid #28242E;
     border-right: 3px solid #28242E;
     border-bottom: 3px solid #28242E;
-    border-radius: 15px;   
+    border-radius: 15px;
+    z-index: 3;
 }
 
 
@@ -284,22 +292,74 @@ main > .section1 {
     border-top: 3px solid #28242E;
     border-left: 3px solid #28242E;
     border-bottom: 3px solid #28242E;
-    border-radius: 15px;  
+    border-radius: 15px;
+    z-index: 3;
 }
 
 .slide_principal {
     height: 100%;
     width: 60%;
     position: relative;
-    z-index: 2;
+
 }
 
-.slide1 {
+/*Imagens Carrossel*/
+
+.carrossel {
+
+    width: 98vw;
+    overflow: hidden;
+
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    gap: 3.2%;  
+}
+
+
+.slide_ativo img {
+    height: 29.958vw;
+    width: 52.376vw;
+    padding-right: 0.521vw;
+    
+    scale: 0.99;
+}
+
+
+.slide_images img {
+    height: 28.594vw;
+    width: auto;
+    padding-top: 0.5vw;
+    filter: grayscale(100%) sepia(100%) hue-rotate(230deg) saturate(100%) brightness(15%);
+    transition: filter 0.6s ease;
+    opacity: 75%;
+    
+}
+
+/*.carrossel::after {
+    content: "";
+    padding: 1%;
+    height: 95%;
+    width: 100%;
+    
+    background-image: linear-gradient(-25deg, rgb(0, 0, 0),transparent 45%, rgb(0, 0, 0));
+    position: absolute;
+    top: 1%;
+    left: 0%;
+    z-index: 6;
+}
+
+/*Fim*/
+
+.borda_slide1 {
     height: 28.594vw;
     width: auto;
     scale: 0.99;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.95) 15%,transparent );
     
-    background-color: #0E0B18;
     border-top: 0.6vw solid #644A33;
     border-right: 0.6vw solid #644A33;
     border-bottom: 0.6vw solid #644A33;
@@ -309,51 +369,84 @@ main > .section1 {
 }
 
 
-.slide2 {
+
+.borda_slide2 {
     height: 29.13vw;
     width: 51.787vw;
-    scale: 0.98;
-    background-color: #0E0B18;
+    scale: 0.99;
+    
     border: 0.6vw solid;
     border-image: linear-gradient(to right, #644A33, #CA9567, #644A33) 1;
     position: relative;
     z-index: 2;
+
+    transition: 0.2s;
 }
 
-a .side_bl{
+.borda_slide2::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to top, #3B3844, transparent 35%);
+    opacity: 60%;
+    position: absolute;
+}
+
+.borda_slide2:hover {
+    scale: 0.999999;
+    transition: 0.3s;
+}
+
+.borda_slide3 {
+    height: 28.594vw;
+    width: auto;
+    scale: 0.99;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.95) 15%,transparent );
+    
+    border-top: 0.6vw solid #644A33;
+    border-left: 0.6vw solid #644A33;
+    border-bottom: 0.6vw solid #644A33;
+    border-right: 0.4vw solid #644A33;
+    border-radius: 15px;
+    z-index: 0;
+}
+
+.side_bl{
     opacity: 80%;
     position: absolute;
     height: 8.021vw;
     top: 35%;
-    left: -6%;
-    z-index: 1;
+    left: -6.2%;
+    z-index: 4;
 }
 
 .side_bl:hover {
-    opacity: 90%;
+    opacity: 100%;
+    transition-duration: 0.3s;
 }
 
-a .side_br{
+.side_br{
     opacity: 80%;
     position: absolute;
     height: 8.021vw;
     top: 35%;
-    right: -5%;
-    z-index: 1;
+    right: -5.4%;
+    z-index: 4;
 }
 
 .side_br:hover {
-    opacity: 90%;
+    opacity: 100%;
+    transition-duration: 0.3s;
 }
 
 .over_b_l {
     filter: var(--sombras-elementos);
-
+    width: auto;
     position: absolute;
     height: 3.5vw;
     top: 42.5%;
     left: -2%;
-    z-index: 4;
+    z-index: 5;
 }
 
 .over_b_l:hover {
@@ -365,12 +458,12 @@ a .side_br{
 
 .over_b_r {
     filter: var(--sombras-elementos);
-
+    width: auto;
     position: absolute;
     height: 3.5vw;
     top: 42.5%;
     right: -1%;
-    z-index: 4;
+    z-index: 5;
 }
 
 .over_b_r:hover {
@@ -380,19 +473,6 @@ a .side_br{
     transition-duration: 0.2s;
 }
 
-.slide3 {
-    height: 28.594vw;
-    width: auto;
-    scale: 0.99;
-
-    background-color: #0E0B18;
-    border-top: 0.6vw solid #644A33;
-    border-left: 0.6vw solid #644A33;
-    border-bottom: 0.6vw solid #644A33;
-    border-right: 0.4vw solid #644A33;
-    border-radius: 15px;
-    z-index: 0;
-}
 
 .moldura_carrossel {
     height: 28vw;
@@ -401,7 +481,7 @@ a .side_br{
     top: 2%;
     right: -2.5%;
     pointer-events: none;
-    z-index: 3;
+    z-index: 4;
 }
 
 .adesivos {
@@ -411,7 +491,7 @@ a .side_br{
     height: 36.2vw;
     top: -10%;
     left: -5%;
-    z-index: 4; 
+    z-index: 6; 
 }
 
 
