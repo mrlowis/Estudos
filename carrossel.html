@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body { /*AJUSTA O TAMANHO DA TELA E ALINHA OS ELEMENTOS AO CENTRO - CONTAINER 1*/ 
+            margin: 0%;
+            padding: 0%;
+
+            width: 100%;
+            height: 100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slider { /*CRIA UMA MÁSCARA DE CORTE NOS ELEMENTOS DO CARROSSEL NO TAMANHO DAS IMAGENS E ESCONDE ELEMENTOS INDESEJADOS*/
+            margin: 0px auto;
+            width: 46.667vw;
+            height: 26.25vw;
+            overflow: hidden;
+        }
+
+         .slides { /*DEFINE UMA LARGURA TOTAL DE ACORDO COM A QUANTIDADE DE SLIDES QUE TENHAM NO CARROSSEL*/
+            width: 300%;
+            height: 26.25vw;
+            display: flex;
+        }
+
+        .slides input {
+            display: none; /*REMOVE OS INPUTS DA TELA*/
+        }
+
+        .slide { /*DEFINE DEFINE QUANTO CADA IMAGEM CONTIDA NA DIV SLIDES IRÁ OCUPAR DA LARGURA TOTAL*/
+            width: 33.33%;
+            position: relative;
+        }
+
+        .slide img {  /*REDIMENSIONA AS IMAGENS*/
+            width: 46.667vw;
+        }
+        
+        .manual-navigation { /*ALINHA OS BOTÕES DA NAVEGAÇÃO MANUAL*/
+            position: absolute;
+            
+            width: 46.667vw;
+            top: 80%;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .manual-btn { /*CONFIGURA O ESTILO DOS BOTÕES MANUAIS*/
+            border: 2px solid red;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .manual-btn:not(:last-child) { /*APLICA UMA MARGEM DE 5% À DIREITA NOS BOTÕES, EXCETO NO ULTIMO*/
+            margin-right: 5%;
+        }
+
+        .manual-btn:hover { /*HOVER DOS BOTÕES MANUAIS*/
+            background-color: red;
+        }
+
+        #radio1:checked ~ .first {
+            margin: 0%;
+        }
+
+        #radio2:checked ~ .first {
+            margin-left: -33.3%;
+        }
+
+        #radio3:checked ~ .first {
+            margin-left: -66.6%;
+        }
+
+
+    </style>
+</head>
+<body>
+<section class="slider">
+
+        <div class="slides">    <!--Corresponde ao Carrossel-->
+
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+
+            <div class="slide first">
+                <img src="/UDM/src/imagens/Nahid e Lub'Ru2.png" alt="#">
+            </div>
+
+            <div class="slide">
+                <img src="/UDM/src/imagens/Capas/T3-E26.png" alt="#">
+            </div>
+
+            <div class="slide">
+                <img src="/UDM/src/imagens/Capas/T3-E29.png" alt="#">
+            </div>
+
+            <div class="navigation-auto">      
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+            
+        </div>
+</section>
+
+</body>
+</html>

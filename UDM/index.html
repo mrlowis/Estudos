@@ -52,26 +52,46 @@
     
     <main>
         <section class="section1">
+            
             <!--SLIDE IMAGENS-->
-        
             <div class="carrossel">
                 
-                <div class="slide_images">
-                    <img src="/UDM/src/imagens/Capas/T3-E26.png" alt="#">
+                <div class="container">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    
+                    <div class="slide_images first">
+                        <img src="/UDM/src/imagens/Nahid e Lub'Ru2.png" alt="#">
+                    </div>
+                    
+                    <div class="slide_images">
+                        <img src="/UDM/src/imagens/Capas/T3-E26.png" alt="#">
+                    </div>
+
+                    
+                    <div class="slide_images">
+                        <img src="/UDM/src/imagens/Capas/T3-E29.png" alt="#">
+                    </div>
+
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                    </div>
+
                 </div>
-        
-                <div class="slide_ativo">
-                    <img src="/UDM/src/imagens/Capas/Nahid_e_LubRu.png" alt="#">
-                </div>
-        
-                <div class="slide_images">
-                    <img src="/UDM/src/imagens/Capas/T3-E29.png" alt="#">
-                </div>
-        
+                
             </div>
+
+
             <!-- BORDAS E MOLDURA -->
             <div class="border1">
-                <div class="borda_slide1"></div>
+
+                <div class="borda_slide1">
+                    <a class="side_btn1" href="#"></a>
+                </div>
+
             </div>
 
             <div class="slide_principal">
@@ -92,9 +112,18 @@
             </div>
 
             <div class="border3">
-                <div class="borda_slide3"></div>
+
+                <div class="borda_slide3">
+                    <a class="side_btn2" href="#"></a>
+                </div>
+
             </div>
 
+            <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            </div>
             
         </section>
         </main>
@@ -102,5 +131,7 @@
     <footer>
         <img src="/UDM/src/imagens/rodape 1.png" alt="#">
     </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>

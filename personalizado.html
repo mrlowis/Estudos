@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        main {
+            margin: auto;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+
+            width: 100%;
+            height: 29.13vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slider {
+            position: relative;
+            background-color: blue;
+            width: 51.787vw;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .slides input {
+            display: none;
+        }
+        
+        .slides {
+            width: 300%;
+            display: flex;
+        }
+
+        .slides img {
+            height: 29.13vw;
+            width: 51.787vw;
+        }
+
+        .manual-navigation {
+            position: absolute;
+            top: 82%;
+            width: 100%;
+
+            margin-top: 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .manual-btn {
+            border: 2px solid red;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .manual-btn:not(:last-child) {
+            margin-right: 3%;
+        }
+
+        .manual-btn:hover {
+            background-color: red;
+        }
+
+        #radio1:checked ~ .first {
+            margin-left: -0;
+        }
+
+        #radio2:checked ~ .first {
+            margin-left: -33.3%;
+        }
+
+        #radio3:checked ~ .first {
+            margin-left: -66.6%;
+        }   
+    </style>
+</head>
+<body>
+    <main>
+        <section> <!--SEÇÃO-->
+            <div class="slider"> <!--CONTAINER 1 - MANUAL NAVIGATION--> 
+                <div class="slides"> <!--CONTAINER 2-->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    
+                    <div class="slide first"><img src="/UDM/src/imagens/Capas/T3-E26.png" alt="#"></div>
+                   
+                    <div class="slide"><img src="/UDM/src/imagens/Capas/T3-E24 (1).png" alt="#"></div>
+        
+                    <div class="slide"><img src="/UDM/src/imagens/Capas/T3-E29.png" alt="#"></div>
+                   
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
