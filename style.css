@@ -1,143 +1,113 @@
-/*REGRAS*/
+/* =========================================
+ CONFIGURAÇÕES INICIAIS
+========================================= */
+
+/* Regras básicas */
 @charset 'UTF-8';
 
+/* Importação de fontes */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Junge&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
 
-/*VARIÁVEIS*/
+/* -----------------------------------------
+ VARIÁVEIS GLOBAIS
+----------------------------------------- */
 :root {
     --cor1: #0E0B18;
     --cor2: #1C0E20;
     --cor_linhas: #241B2E;
-    --fonte-parágrafos: 'Junge', sans-serif ;
-    --fonte-titulos: 'Cinzel', arial, sans-serif ;
-    --fonte-decorative: 'Cinzel Decorative', cursive;
     --cor-ouro: #C19456;
+
+    --fonte-parágrafos: 'Junge', sans-serif;
+    --fonte-titulos: 'Cinzel', arial, sans-serif;
+    --fonte-decorative: 'Cinzel Decorative', cursive;
+
     --sombras-elementos: drop-shadow(0px 0px 10px #0E0B18);
 }
 
-/*CONFIGURAÇÕES GLOBAIS*/
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
 }
 
-/*CONFIGURAÇÕES CONTAINERS*/
+/* =========================================
+ ESTRUTURA BASE DA PÁGINA
+========================================= */
+
+/* HTML e Body - fundo principal */
 html, body {
-    height: 100%;
-    background-image: linear-gradient( 10deg, var(--cor1) 60%, #0E0B18,  var(--cor2));
+    height: fit-content;
+    background-image: linear-gradient(10deg, var(--cor1) 60%, #0E0B18, var(--cor2));
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 
-/*BODY E BACKGROUND*/
+/* -----------------------------------------
+   BODY e seus efeitos visuais
+----------------------------------------- */
 body {
-    height: 100%;
+
     background-image: url(/src/imagens/nora_bg.png);
-    overflow: scroll;
     background-position: bottom center;
     background-repeat: no-repeat;
-    background-attachment: local;
+    background-attachment: fixed;
     background-size: 83%;
-    transition: background-size 1s linear;
-    margin: 0;
+    overflow: scroll;
+    
+
     display: flex;
     flex-direction: column;
     position: relative;
+    margin: 0;
     z-index: 0;
-    transition: 1s;
-    
+
+    transition: background-size 1s linear;
 }
 
-
+/* Moldura superior */
 body::before {
     content: "";
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: -41%;
+    left: 3.8%;
+    width: 92%;
+    height: 92%;
+
     background-image: url(/src/imagens/Moldura_Topo.svg);
     background-position: bottom center;
     background-repeat: no-repeat;
     background-attachment: contain;
     background-size: contain;
-    position: absolute;
+
     z-index: 1;
-    top: 13%;
-    left: 0;
 }
 
+/* Efeito de zoom no fundo */
 body:hover {
     background-size: 80%;
 }
 
-/*CABEÇALHO*/
+/* =========================================
+ CABEÇALHO E NAVEGAÇÃO
+========================================= */
 header {
     width: auto;
     height: 80px;
 }
 
 nav {
-    padding-top: 10px;
-
     width: 100%;
     height: 100%;
+    padding-top: 10px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.botao_acessar {
-
-    height: 80%;
-    width: fit-content;
-    margin-right: 4%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.entalhe {
-    height: 80%;
-    position: relative;
-}
-
-
-.botao {
-    height: 42px;
-    position: absolute;
-    z-index: 1;
-}
-
-.botao:hover {
-    filter: drop-shadow(0px 2px 4px #c787ffa6);
-    transition-duration: 0.2s;
-    height: 45px;
-}
-
-.botao_acessar .acessar {
-    height: 22px;
-    position: absolute;
-    z-index: 2;
-}
-
-.acessar:hover {
-    scale: 1.01;
-    filter: drop-shadow(0px -0.5px 10px #ff56eb) drop-shadow(0px 1px 2px black);
-    transition-duration: 0.2s;
-}
-
-.linha {
-    background-color: var(--cor_linhas);
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.527);
-    height: 6px;
-    border-radius: 50px;
-    margin: 0px 2px;
-
-    flex: 1;
-}
-
+/* ----- Logo ----- */
 .logo {
     height: 80%;
     width: 150px;
@@ -154,17 +124,77 @@ nav {
     transition-duration: 0.5s;
 }
 
-/*TÍTULO E DESCRIÇÃO*/
+/* ----- Linha divisória ----- */
+.linha {
+    flex: 1;
+    height: 6px;
+    margin: 0px 2px;
+
+    background-color: var(--cor_linhas);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.527);
+    border-radius: 50px;
+}
+
+/* ----- Botão "Acessar" ----- */
+.botao_acessar {
+    height: 80%;
+    width: fit-content;
+    margin-right: 4%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.entalhe {
+    height: 80%;
+    position: relative;
+}
+
+.botao {
+    height: 42px;
+    position: absolute;
+    z-index: 1;
+}
+
+.botao:hover {
+    height: 45px;
+    filter: drop-shadow(0px 2px 4px #c787ffa6);
+    transition-duration: 0.2s;
+}
+
+.botao_acessar .acessar {
+    height: 22px;
+    position: absolute;
+    z-index: 2;
+}
+
+.acessar:hover {
+    scale: 1.01;
+    filter: drop-shadow(0px -0.5px 10px #ff56eb) drop-shadow(0px 1px 2px black);
+    transition-duration: 0.2s;
+}
+
+/* =========================================
+ TÍTULO E DESCRIÇÃO PRINCIPAL
+========================================= */
+
+article {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 10%;
+}
+
 .title_container {
     margin: 16% auto 25px;
     width: 73%;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    z-index: 1;
 
+    z-index: 1;
     transition-duration: 0.5s;
 }
 
@@ -173,11 +203,10 @@ nav {
     transition-duration: 0.3s;
 }
 
-
 .title_container > h1 {
     font-family: var(--fonte-decorative);
     font-weight: bold;
-    font-size: 2.2em;
+    font-size: 200%;
     color: var(--cor-ouro);
 }
 
@@ -188,63 +217,61 @@ nav {
     color: white;
 }
 
-
-/*BOTÃO VISITANTE- SECTION*/
+/* =========================================
+ BOTÃO "ENTRAR COMO VISITANTE"
+========================================= */
 .botao_visitante {
     position: relative;
-    top: 10px;
-    margin-bottom: 100px;
     z-index: 1;
 }
 
-
-.botao_visitante img {
+.botao_visitante .paper-btn {
     display: block;
-    height: 34.5%;
-    padding-left: 13%;
+    width: 20em;
+    padding-left: 12.5%;
     position: relative;
 }
 
 .botao_visitante .entrar_como {
-    font-family: var(--fonte-parágrafos);
-    font-weight: normal;
-    font-size: 1.2em;
-    color: white;
-    text-decoration: none;
     position: absolute;
+    top: 28%;
+    left: 15%;
     z-index: 2;
-    top: -2%;
-    left: 16%;
-    
-    border: 1px solid rgba(255, 0, 0, 0);
-    height: 34.5%;
-    width: auto;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
+    font-family: var(--fonte-parágrafos);
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+
+    border: 1px solid rgba(255, 0, 0, 0);
+    height: 34.5%;
 }
 
 .entrar_como::before {
     content: "";
-    height: 2.5px;
-    width: 200px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), white, rgba(255, 255, 255, 0));
     position: absolute;
-    bottom: 35%;
+    bottom: 25%;
+    width: 200px;
+    height: 2.5px;
+
+    background-image: linear-gradient(to right, rgba(255,255,255,0), white, rgba(255,255,255,0));
 }
 
 .seta_visitante {
+    height: 95%;
     position: absolute;
+    top: 0%;
+    left: 13%;
     z-index: 2;
-    top: -35%;
-    left: -0.2%;
 }
-
-
 
 .entrar_como:hover {
     scale: 1.08;
-    transition-duration: 0.4s;    
+    transition-duration: 0.4s;
 }
 
 .seta_visitante:hover {
@@ -252,112 +279,110 @@ nav {
     transition-duration: 0.5s;
 }
 
-/*CONTEÚDO CENTRAL E SEÇÕES*/
+/* =========================================
+ CONTEÚDO PRINCIPAL
+========================================= */
 main {
-    height: fit-content;
     width: 100%;
+    height: fit-content;
     margin: auto;
     z-index: 2;
-
 }
 
+/* ----- Section Principal ----- */
 .section1 {
     margin: 0 auto 30px;
-    display: flex;
+    width: 100%;
 
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: 3.5%;
-    width: 100%;
 
     filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.15));
 }
 
-/*CARROSSEL*/
-.border1 {
+/* =========================================
+ CARROSSEL DE IMAGENS
+========================================= */
+
+/* Estrutura lateral e central */
+.border1, .border3 {
     width: 23%;
     height: 84%;
-    
     border-top: 3px solid #28242E;
-    border-right: 3px solid #28242E;
     border-bottom: 3px solid #28242E;
     border-radius: 15px;
     z-index: 3;
 }
 
-
-
-.border3 {
-    width: 23%;
-    height: 84%;
-    
-    border-top: 3px solid #28242E;
-    border-left: 3px solid #28242E;
-    border-bottom: 3px solid #28242E;
-    border-radius: 15px;
-    z-index: 3;
-}
+.border1 { border-right: 3px solid #28242E; }
+.border3 { border-left: 3px solid #28242E; }
 
 .slide_principal {
-    height: 100%;
     width: 60%;
+    height: 100%;
     position: relative;
-
 }
 
-/*Imagens Carrossel*/
-
+/* ----- Container do carrossel ----- */
 .carrossel {
-
     width: 98vw;
-
     margin: 0 auto;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
 
+    position: absolute;
     z-index: 2;
 }
 
-.carrossel input {
-    display: none;
-}
+.carrossel input { display: none; }
 
 .container {
-    background-color: #503a28;
-    overflow: hidden;
     display: flex;
-    height: 28.823vw;
-    width: 51.241vw;
-    gap: 9%;
-    
-}
+    overflow: hidden;
 
-.slide_images img {
-    height: 28.823vw;
     width: 51.241vw;
+    height: 28.823vw;
+    gap: 9%;
+
+    background-color: #503a28;
 }
 
 .slide_images {
     transition: 2s;
 }
 
+.slide_images img {
+    width: 51.241vw;
+    height: 28.823vw;
+}
+
+/* =========================================
+ CONTROLES DO CARROSSEL
+========================================= */
+
+/* Navegação manual */
 .manual-navigation {
-    background-color: #302b3831;
-    border: 10px solid #0E0B18;
-    filter: drop-shadow(0px -2px 5px rgba(0, 0, 0, 0.200));
     position: absolute;
     top: 107%;
     z-index: 2;
 
-    border-radius: 50px;
-    padding: 0.7% 0px;
-    height: 0.1vw;
-    width: 10vw;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    width: 10vw;
+    height: 0.1vw;
+    padding: 0.7% 0;
+
+    border: 10px solid #0E0B18;
+    border-radius: 50px;
+
+    background-color: #302b3831;
+    filter: drop-shadow(0px -2px 5px rgba(0,0,0,0.2));
 }
 
 .manual-btn {
@@ -377,232 +402,164 @@ main {
     margin-right: 10%;
 }
 
-#radio1:checked ~ .first{
-    margin-left: 0;
-    transition: 1.5s;
-}
+/* Mudança de posição */
+#radio1:checked ~ .first { margin-left: 0; transition: 1.5s; }
+#radio2:checked ~ .first { margin-left: -108.5%; transition: 1.5s; }
+#radio3:checked ~ .first { margin-left: -217.5%; transition: 1.5s; }
 
-#radio2:checked ~ .first{
-    margin-left: -108.5%;
-    transition: 1.5s;
-}
-
-#radio3:checked ~ .first{
-    margin-left: -217.5%;
-    transition: 1.5s;
-}
-
-/*NAVEGAÇÃO AUTOMÁTICA*/
-.navigation-auto div{
-    border: 2px solid rgba(0, 0, 255, 0);
-    padding: 2%;
-    border-radius: 50%;
-
-    cursor: pointer;
-    transition: 0.5s;
-}
-
+/* Navegação automática */
 .navigation-auto {
     position: absolute;
-    width: 11.129vw;
-    margin-top: 2.549vw;
+    top: 104%;
+    left: 44.3%;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 104%;
-    left: 44.3%;
+    width: 11.129vw;
+    margin-top: 2.549vw;
+}
 
+.navigation-auto div {
+    border: 2px solid transparent;
+    padding: 2%;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
 .navigation-auto div:not(:last-child) {
     margin-right: 10%;
 }
 
-#radio1:checked ~ .navigation-auto .auto-btn1 {
-    background-color: #493f5a63;
-}
-
-#radio2:checked ~ .navigation-auto .auto-btn2 {
-    background-color: #493f5a63;
-}
-
+#radio1:checked ~ .navigation-auto .auto-btn1,
+#radio2:checked ~ .navigation-auto .auto-btn2,
 #radio3:checked ~ .navigation-auto .auto-btn3 {
     background-color: #493f5a63;
 }
 
+/* =========================================
+ ESTÉTICA DO CARROSSEL
+========================================= */
 
-/*BORDAS CARROSSEL*/
-
-.borda_slide1 {
+/* Bordas e laterais */
+.borda_slide1,
+.borda_slide3 {
     height: 28.594vw;
     width: auto;
-    scale: 1;
     background: #0E0B18;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.15), transparent 70% );
-    border-top: 0.3vw solid #644A33;
-    border-right: 0.4vw solid #644A33;
-    border-bottom: 0.3vw solid #644A33;
-    border-radius: 0px 15px 15px 0px;
-    z-index: 0;
-
+    scale: 1;
     display: flex;
     align-items: end;
 }
 
-.borda_slide1 .side_btn1 {
-    background-image: linear-gradient(to bottom, transparent, #0e0b1890 50%);
-
-    height: 100%;
-    width: 100%;
-
-    position: relative;
+.borda_slide1 {
+    background-image: linear-gradient(to left, rgba(0,0,0,0.15), transparent 70%);
+    border: 0.3vw solid #644A33;
+    border-right: 0.4vw solid #644A33;
+    border-radius: 0 15px 15px 0;
 }
 
-.side_btn1:hover {
-
-    background-image: linear-gradient(to bottom, transparent, #0e0b18ce 50%);
+.borda_slide3 {
+    background-image: linear-gradient(to right, rgba(0,0,0,0.15), transparent 70%);
+    border: 0.3vw solid #644A33;
+    border-left: 0.4vw solid #644A33;
+    border-radius: 15px 0 0 15px;
 }
 
+/* Borda central */
 .borda_slide2 {
-    height: 28.594vw;
-    width: 50.834vw;
+    position: relative;
+    z-index: 2;
     scale: 0.99;
-    
+
+    width: 50.834vw;
+    height: 28.594vw;
+
     background-color: #0e0b180a;
     border: 0.8vw solid;
     border-image: linear-gradient(to right, #644A33, #CA9567, #644A33) 1;
-    position: relative;
-    z-index: 2;
-
     transition: 0.2s;
 }
 
 .borda_slide2::after {
     content: "";
-    height: 100%;
+    position: absolute;
     width: 100%;
+    height: 100%;
     background-image: linear-gradient(to top, #3b384467, transparent 35%);
-    position: absolute;
 }
 
-.borda_slide2:hover {
-    content: "";
-    background-image: linear-gradient(to top, #3b384460, transparent 45%);
-    
-}
+/* =========================================
+ BOTÕES E ORNAMENTOS
+========================================= */
 
-.borda_slide3 {
-    height: 28.594vw;
-    width: auto;
-    scale: 1;
-    background: #0E0B18;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.15), transparent 70% );
-    border-top: 0.3vw solid #644A33;
-    border-left: 0.4vw solid #644A33;
-    border-bottom: 0.3vw solid #644A33;
-    border-radius: 15px 0px 0px 15px;
-    z-index: 0;
-
-    display: flex;
-    align-items: end;
-}
-
-.borda_slide3 .side_btn2 {
-    background-image: linear-gradient(to bottom, transparent, #0e0b1890 50%);
-
-    height: 100%;
-    width: 100%;
-}
-
-.side_btn2:hover {
-    background-image: linear-gradient(to bottom, transparent, #0e0b18ce 50%);
-}
-
-/*BOTÕES CARROSSEL*/
-.side_bl{
-    opacity: 70%;
+/* Laterais */
+.side_bl, .side_br {
     position: absolute;
     height: 8.021vw;
     top: 35%;
-    left: -6.6%;
-    z-index: 4;
-}
-
-.side_bl:hover {
-    opacity: 100%;
-    transition-duration: 0.3s;
-}
-
-.side_br{
     opacity: 70%;
-    position: absolute;
-    height: 8.021vw;
-    top: 35%;
-    right: -7.1%;
     z-index: 4;
+    transition: 0.3s;
 }
 
-.side_br:hover {
+.side_bl { left: -6.6%; }
+.side_br { right: -7.1%; }
+
+.side_bl:hover, .side_br:hover {
     opacity: 100%;
-    transition-duration: 0.3s;
 }
 
-.over_b_l {
-    filter: var(--sombras-elementos);
-    width: auto;
+/* Setas sobrepostas */
+.over_b_l, .over_b_r {
     position: absolute;
     height: 3.5vw;
+    width: auto;
     top: 42.5%;
-    left: -2%;
+    filter: var(--sombras-elementos);
     z-index: 5;
+    transition-duration: 0.2s;
 }
+
+.over_b_l { left: -2%; }
+.over_b_r { right: -2%; }
 
 .over_b_l:hover {
     height: 3.55vw;
     left: -3%;
-    filter: drop-shadow(5px 0px 10px rgba(66, 149, 226, 0.200));
-    transition-duration: 0.2s;
-}
-
-.over_b_r {
-    filter: var(--sombras-elementos);
-    width: auto;
-    position: absolute;
-    height: 3.5vw;
-    top: 42.5%;
-    right: -2%;
-    z-index: 5;
+    filter: drop-shadow(5px 0px 10px rgba(66,149,226,0.2));
 }
 
 .over_b_r:hover {
     height: 3.55vw;
     right: -3%;
-    filter: drop-shadow(-5px 0px 10px rgba(66, 149, 226, 0.200));
-    transition-duration: 0.2s;
+    filter: drop-shadow(-5px 0px 10px rgba(66,149,226,0.2));
 }
 
-/*ORNAMENTOS CARROSSEL*/
+/* Molduras e adesivos */
 .moldura_carrossel {
-    height: 28.823vw;
-    scale: 0.98;
     position: absolute;
     top: -0.2%;
     right: -6.3%;
-    pointer-events: none;
+    height: 28.823vw;
+    scale: 0.98;
     z-index: 4;
+    pointer-events: none;
 }
 
 .adesivos {
-    filter: drop-shadow(0px 11px 8px #00000094);
-    pointer-events: none;
     position: absolute;
-    height: 36.45vw;
     top: -10.5%;
     left: -6.2%;
-    z-index: 6; 
+    height: 36.45vw;
+    z-index: 6;
+    pointer-events: none;
+    filter: drop-shadow(0px 11px 8px #00000094);
 }
 
-/*SLIDERS*/
+/* =========================================
+ RODAPÉ
+========================================= */
 footer {
     display: flex;
     justify-content: center;
