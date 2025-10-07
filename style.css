@@ -70,7 +70,7 @@ body {
 body::before {
     content: "";
     position: absolute;
-    top: -41%;
+    top: -43%;
     left: 3.8%;
     width: 92%;
     height: 92%;
@@ -194,6 +194,7 @@ article {
     justify-content: start;
     align-items: start;
 
+    position: relative;
     z-index: 1;
     transition-duration: 0.5s;
 }
@@ -206,7 +207,7 @@ article {
 .title_container > h1 {
     font-family: var(--fonte-decorative);
     font-weight: bold;
-    font-size: 200%;
+    font-size: 2vw;
     color: var(--cor-ouro);
 }
 
@@ -235,8 +236,8 @@ article {
 .botao_visitante .entrar_como {
     position: absolute;
     top: 28%;
-    left: 15%;
-    z-index: 2;
+    left: 15.5%;
+    z-index: 0;
 
     display: flex;
     justify-content: center;
@@ -254,7 +255,7 @@ article {
 .entrar_como::before {
     content: "";
     position: absolute;
-    bottom: 25%;
+    bottom: 0%;
     width: 200px;
     height: 2.5px;
 
@@ -291,9 +292,11 @@ main {
 
 /* ----- Section Principal ----- */
 .section1 {
+    padding: 2% 0 5% 0;
     margin: 0 auto 30px;
     width: 100%;
-
+    
+    background-color: var(--cor1);
     display: flex;
     justify-content: center;
     align-items: center;
