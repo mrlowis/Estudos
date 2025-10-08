@@ -49,11 +49,11 @@ html, body {
 ----------------------------------------- */
 body {
 
-    background-image: url(/src/imagens/nora_bg.png);
-    background-position: bottom center;
+    background-image: url(./src/imagens/background.webp);
+    background-position: top center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 83%;
+    background-size: 80%;
     overflow: scroll;
     
     display: flex;
@@ -69,12 +69,12 @@ body {
 body::before {
     content: "";
     position: absolute;
-    top: 6%;
+    top: 4%;
     left: 5%;
     width: 90%;
     height: 90%;
 
-    background-image: url(/src/imagens/Moldura_Topo.svg);
+    background-image: url(./src/imagens/Moldura_Topo.svg);
     background-position: top center;
     background-repeat: no-repeat;
     background-attachment: local;
@@ -83,10 +83,10 @@ body::before {
     z-index: 1;
 }
 
-/* Efeito de zoom no fundo */
+/* Efeito de zoom no fundo 
 body:hover {
     background-size: 80%;
-}
+}*/
 
 /* =========================================
  CABEÇALHO E NAVEGAÇÃO
@@ -184,7 +184,7 @@ article {
 }
 
 .title_container {
-    margin: 16% auto 25px;
+    margin: 12% auto 25px;
     width: 73%;
 
     display: flex;
@@ -205,7 +205,7 @@ article {
 .title_container > h1 {
     font-family: var(--fonte-decorative);
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 2.25vw;
     color: var(--cor-ouro);
 }
 
@@ -230,6 +230,8 @@ article {
     padding-left: 12.5%;
     position: relative;
 }
+
+
 
 .botao_visitante .entrar_como {
     position: absolute;
@@ -265,7 +267,7 @@ article {
     position: absolute;
     top: 0%;
     left: 13%;
-    z-index: 2;
+    z-index: 0;
 }
 
 .entrar_como:hover {
@@ -285,7 +287,8 @@ main {
     width: 100%;
     height: fit-content;
     margin: auto;
-    background-image: linear-gradient(to bottom, #0b091200, #0b09127c, #0E0B18, #0e0b1800);
+    background-image:linear-gradient(to bottom, rgba(255, 0, 0, 0), red 30%);
+
     z-index: 2;
 }
 
@@ -300,7 +303,9 @@ main {
     align-items: center;
     gap: 3.5%;
    
-    background-image: linear-gradient(to top, #0b0912, #0B0912, #0B0912, #0b091295, #0b091200);
+    background-image: linear-gradient(to top, #0b091200, #0B0912, #0B0912, #0b091295, #0b091200);
+    background-repeat: no-repeat;
+    background-position: bottom center;
     filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.15));
 }
 
@@ -409,7 +414,7 @@ main {
 .navigation-auto {
     position: absolute;
     top: 98.5%;
-    left: 44.3%;
+    left: 44.33%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -556,7 +561,11 @@ main {
 }
 
 /*SEÇÃO 2*/
-
+.section2 {
+    background-color: blue;
+    margin: 4% auto 2%;
+    height: 1000px;
+}
 
 /* =========================================
  RODAPÉ
