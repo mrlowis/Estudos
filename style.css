@@ -37,7 +37,7 @@
 
 /* HTML e Body - fundo principal */
 html, body {
-    height: fit-content;
+    height: 100%;
     background-image: linear-gradient(10deg, var(--cor1) 60%, #0E0B18, var(--cor2));
     background-repeat: no-repeat;
     background-size: cover;
@@ -287,23 +287,25 @@ main {
     width: 100%;
     height: fit-content;
     margin: auto;
+    background-image: linear-gradient(to bottom, #0b091200, #0b09127c, #0E0B18, #0e0b1800);
     z-index: 2;
 }
 
 /* ----- Section Principal ----- */
 .section1 {
-    padding: 2% 0 5% 0;
+
     margin: 0 auto 30px;
     width: 100%;
-    
-    background-color: var(--cor1);
+
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 3.5%;
-
+   
+    background-image: linear-gradient(to top, #0b0912, #0B0912, #0B0912, #0B0912, #0b091200);
     filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.15));
 }
+
 
 /* =========================================
  CARROSSEL DE IMAGENS
@@ -370,34 +372,35 @@ main {
 /* Navegação manual */
 .manual-navigation {
     position: absolute;
-    top: 107%;
+    top: 106%;
+    left:45%;
     z-index: 2;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    width: 10vw;
-    height: 0.1vw;
+    width: 10%;
+    height: 0.2%;
     padding: 0.7% 0;
 
-    border: 10px solid #0E0B18;
+    border: 0.5vw solid  hsl(257, 26%, 14%);
     border-radius: 50px;
-
-    background-color: #302b3831;
-    filter: drop-shadow(0px -2px 5px rgba(0,0,0,0.2));
+    
+    background-color: #0e0b1331;
+    filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.384));
 }
 
 .manual-btn {
-    border: 2.5px solid #302b38;
+    border: 2.5px solid #26222e;
     background-color: #302b3834;
     padding: 3%;
-    border-radius: 10px;
+    border-radius: 1vw;
     transition: 0.5s;
 }
 
 .manual-btn:hover {
-    background-color: #736688a1;
+    background-color: #3b314ba1;
     cursor: pointer;
 }
 
@@ -413,8 +416,8 @@ main {
 /* Navegação automática */
 .navigation-auto {
     position: absolute;
-    top: 104%;
-    left: 44.3%;
+    top: 100%;
+    left: 44.8%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -423,21 +426,21 @@ main {
 }
 
 .navigation-auto div {
-    border: 2px solid transparent;
-    padding: 2%;
+    border: 2% solid transparent;
+    padding: 3%;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.5s;
 }
 
 .navigation-auto div:not(:last-child) {
-    margin-right: 10%;
+    margin-right: 10.2%;
 }
 
 #radio1:checked ~ .navigation-auto .auto-btn1,
 #radio2:checked ~ .navigation-auto .auto-btn2,
 #radio3:checked ~ .navigation-auto .auto-btn3 {
-    background-color: #493f5a63;
+    background-color: #383046;
 }
 
 /* =========================================
@@ -501,7 +504,7 @@ main {
     position: absolute;
     height: 8.021vw;
     top: 35%;
-    opacity: 70%;
+    opacity: 100%;
     z-index: 4;
     transition: 0.3s;
 }
@@ -510,7 +513,7 @@ main {
 .side_br { right: -7.1%; }
 
 .side_bl:hover, .side_br:hover {
-    opacity: 100%;
+    opacity: 80%;
 }
 
 /* Setas sobrepostas */
@@ -559,6 +562,9 @@ main {
     pointer-events: none;
     filter: drop-shadow(0px 11px 8px #00000094);
 }
+
+/*SEÇÃO 2*/
+
 
 /* =========================================
  RODAPÉ
