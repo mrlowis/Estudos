@@ -38,7 +38,7 @@
 /* HTML e Body - fundo principal */
 html, body {
     height: fit-content;
-    background-image: linear-gradient(10deg, var(--cor1) 60%, #0E0B18, var(--cor2));
+    background-image: linear-gradient(10deg, var(--cor1) 85%, #0E0B18, var(--cor2));
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: local;
@@ -287,7 +287,7 @@ main {
     width: 100%;
     height: fit-content;
     margin: auto;
-    background-image:linear-gradient(to bottom, rgba(255, 0, 0, 0), red 30%);
+    background-image:linear-gradient(to bottom, rgba(255, 0, 0, 0), rgb(0, 0, 0) 30%);
 
     z-index: 2;
 }
@@ -315,9 +315,20 @@ main {
 ========================================= */
 
 /* Estrutura lateral e central */
-.border1, .border3 {
+.border1 {
     width: 23%;
     height: 84%;
+    padding: 0.4% 0.4% 0.4% 0;
+    border-top: 3px solid #28242E;
+    border-bottom: 3px solid #28242E;
+    border-radius: 15px;
+    z-index: 3;
+}
+
+.border3 {
+    width: 23%;
+    height: 84%;
+    padding: 0.4% 0% 0.4% 0.4%;
     border-top: 3px solid #28242E;
     border-bottom: 3px solid #28242E;
     border-radius: 15px;
@@ -449,24 +460,34 @@ main {
 .borda_slide3 {
     height: 28.594vw;
     width: auto;
-    background: #0E0B18;
+
     scale: 1;
     display: flex;
     align-items: end;
 }
 
 .borda_slide1 {
-    background-image: linear-gradient(to left, rgba(0,0,0,0.15), transparent 70%);
-    border: 0.3vw solid #644A33;
-    border-right: 0.4vw solid #644A33;
+    background-image: url(./src/imagens/Mathias\ e\ Tiffany.png);
+    background-position: center center;
+    background-size: cover;
+    opacity: 80%;
+    border: 0.4vw solid #644A33;
+    border-right: 0.5vw solid #644A33;
     border-radius: 0 15px 15px 0;
+    box-shadow: inset 5vw 0px 100px 10px rgb(0, 0, 0);
 }
 
+
+
 .borda_slide3 {
-    background-image: linear-gradient(to right, rgba(0,0,0,0.15), transparent 70%);
-    border: 0.3vw solid #644A33;
-    border-left: 0.4vw solid #644A33;
-    border-radius: 15px 0 0 15px;
+    background-image: url(./src/imagens/T3-E46.png);
+    background-position: center center;
+    background-size: cover;
+    opacity: 80%;
+    border: 0.4vw solid #644A33;
+    border-right: 0.5vw solid #644A33;
+    border-radius: 0 15px 15px 0;
+    box-shadow: inset -5vw 0px 100px 10px rgb(0, 0, 0);
 }
 
 /* Borda central */
@@ -490,6 +511,10 @@ main {
     width: 100%;
     height: 100%;
     background-image: linear-gradient(to top, #3b384467, transparent 35%);
+}
+
+.borda_slide2 {
+    background-image: linear-gradient(to top, #d9d9d923 5%, transparent, transparent);
 }
 
 /* =========================================
