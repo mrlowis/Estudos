@@ -37,11 +37,11 @@
 
 /* HTML e Body - fundo principal */
 html, body {
-    height: 100%;
+    height: fit-content;
     background-image: linear-gradient(10deg, var(--cor1) 60%, #0E0B18, var(--cor2));
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: local;
 }
 
 /* -----------------------------------------
@@ -56,7 +56,6 @@ body {
     background-size: 83%;
     overflow: scroll;
     
-
     display: flex;
     flex-direction: column;
     position: relative;
@@ -70,15 +69,15 @@ body {
 body::before {
     content: "";
     position: absolute;
-    top: -43%;
-    left: 3.8%;
-    width: 92%;
-    height: 92%;
+    top: 6%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
 
     background-image: url(/src/imagens/Moldura_Topo.svg);
-    background-position: bottom center;
+    background-position: top center;
     background-repeat: no-repeat;
-    background-attachment: contain;
+    background-attachment: local;
     background-size: contain;
 
     z-index: 1;
@@ -182,7 +181,6 @@ nav {
 article {
     width: 100%;
     height: fit-content;
-    margin-bottom: 10%;
 }
 
 .title_container {
@@ -293,7 +291,7 @@ main {
 
 /* ----- Section Principal ----- */
 .section1 {
-
+    padding-top: 10%;
     margin: 0 auto 30px;
     width: 100%;
 
@@ -302,7 +300,7 @@ main {
     align-items: center;
     gap: 3.5%;
    
-    background-image: linear-gradient(to top, #0b0912, #0B0912, #0B0912, #0B0912, #0b091200);
+    background-image: linear-gradient(to top, #0b0912, #0B0912, #0B0912, #0b091295, #0b091200);
     filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.15));
 }
 
@@ -383,18 +381,12 @@ main {
     width: 10%;
     height: 0.2%;
     padding: 0.7% 0;
-
-    border: 0.5vw solid  hsl(257, 26%, 14%);
-    border-radius: 50px;
-    
-    background-color: #0e0b1331;
-    filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.384));
 }
 
 .manual-btn {
-    border: 2.5px solid #26222e;
+    border: 0.2vw solid #d9d9d9ba;
     background-color: #302b3834;
-    padding: 3%;
+    padding: 3.5%;
     border-radius: 1vw;
     transition: 0.5s;
 }
@@ -405,7 +397,7 @@ main {
 }
 
 .manual-btn:not(:last-child) {
-    margin-right: 10%;
+    margin-right: 20%;
 }
 
 /* Mudança de posição */
@@ -416,8 +408,8 @@ main {
 /* Navegação automática */
 .navigation-auto {
     position: absolute;
-    top: 100%;
-    left: 44.8%;
+    top: 98.5%;
+    left: 44.3%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -427,20 +419,20 @@ main {
 
 .navigation-auto div {
     border: 2% solid transparent;
-    padding: 3%;
+    padding: 3.5%;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.5s;
 }
 
 .navigation-auto div:not(:last-child) {
-    margin-right: 10.2%;
+    margin-right: 19.2%;
 }
 
 #radio1:checked ~ .navigation-auto .auto-btn1,
 #radio2:checked ~ .navigation-auto .auto-btn2,
 #radio3:checked ~ .navigation-auto .auto-btn3 {
-    background-color: #383046;
+    background-color: #d9d9d986;
 }
 
 /* =========================================
