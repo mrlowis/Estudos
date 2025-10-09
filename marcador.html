@@ -5,60 +5,342 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
+        /* =========================================
+        CONFIGURAÇÕES INICIAIS
+        ========================================= */
+
+        /* Regras básicas */
+        @charset 'UTF-8';
+
+        /* Importação de fontes */
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Junge&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
+        /* -----------------------------------------
+        VARIÁVEIS GLOBAIS
+        ----------------------------------------- */
+        :root {
+            --cor1: #0E0B18;
+            --cor2: #1C0E20;
+            --cor_linhas: #241B2E;
+            --cor-ouro: #C19456;
+
+            --fonte-parágrafos: 'Junge', sans-serif;
+            --fonte-titulos: 'Cinzel', arial, sans-serif;
+            --fonte-decorative: 'Cinzel Decorative', cursive;
+
+
         * {
             margin: 0;
             padding: 0;
         }
 
+        body {
+            background-color: black;
+        }
+
         .section2 {
             width: auto;
             overflow: hidden;
+            height: fit-content;
         }
 
+        /*BOOKMARK 1*/
         .bmk1 {
-            bavkg
             width: 100%;
-            height: 70vh;
+            height: 15vw;
             
             display: flex;
             align-items: center;
+            position: relative;
         }
 
-        .bmk1 .bmk-over {
-            width: 30%;
-            position: relative;
+        .bmk1 .bmk-over1 {
+            width: 25%;
+            position: absolute;
             z-index: 3;
         }
 
-        .bmk1 .bmk-under {
+        .bmk1 .bmk-under1 {
             position: absolute;
-            width: 100%;
-            top: 15.5%;
-            left: -30%;
+            top: 0%;
+            left: -15%;
             z-index: 2;
             transition: 1s;
         }
 
-        .bmk-under:hover {
+        .bmk1 .bmk-under1 img {
+            width: 85.5%;
+        }
+
+        .bmk-under1::after {
+            content: url(./src/imagens/Seta1.svg);
             position: absolute;
-            top: 13.5%;
-            left: 0;
+            top: 36%;
+            left: 48%;
+            z-index: 10;
+        }
+
+        .bmk-under1:hover {
+            position: absolute;
+            top: -7%;
+            left: 15%;
             transition: 2s;
         }
 
-        .bmk1 p {
-            font-family: Arial, Helvetica, sans-serif;
+        .bmk-under1 h3 {
+            font-family: var(--fonte-decorative);
+            font-weight: bold;
+            font-size: 1.4vw;
+            text-align: center;
+            color: #d9d9d9;
+            position: absolute;
+            top: 35%;
+            left: 30%;
+            transform: rotate(-2deg);
+        }
+
+        .bmk-under1 h3::after {
+            content: "";
+            position: absolute;
+            left: -15%;
+            bottom: -5%;
+            width: 200px;
+            height: 3px;
+
+            background-image: linear-gradient(to right, rgba(255,255,255,0), white, rgba(255,255,255,0));
+        }
+        
+        .bmk-under1 p {
+            opacity: 0%;
+            font-family: var(--fonte-parágrafos);
+            font-weight: normal;
+            text-align: center;
+            color: #d9d9d9;
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            transform: rotate(-2deg);
+        }
+
+        .bmk-under1 h3,
+        .bmk-under1 p {
+            opacity: 0;
+            transition: opacity 0.8s ease 1s;
+        }
+
+        .bmk-under1:hover h3,
+        .bmk-under1:hover p {
+            opacity: 1;
+            transition: opacity 0.8s ease 1s;
+        }
+
+        /*BOOKMARK 2*/
+        .bmk2 {
+            width: 100%;
+            height: 15vw;
+            
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .bmk2 .bmk-over2 {
+            width: 25%;
+            position: absolute; right: 0;
+            z-index: 3;
+        }
+
+        .bmk2 .bmk-under2 {
+            position: absolute;
+            top: 0%;
+            right: -25.5%;
+            z-index: 2;
+            transition: 1s;
         }
 
 
+        .bmk2 .bmk-under2 img {
+            width: 85.5%;
+        }
+
+        .bmk-under2::after {
+            content: url(./src/imagens/Seta2.svg);
+            position: absolute;
+            top: 36%;
+            right: 62.5%;
+            z-index: 10;
+        }
+
+        .bmk-under2:hover {
+            position: absolute;
+            top: -6%;
+            right: 0%;
+            transition: 2s;
+        }
+
+        .bmk-under2 h3 {
+            font-family: var(--fonte-decorative);
+            font-weight: bold;
+            font-size: 1.4vw;
+            text-align: center;
+            color: #d9d9d9;
+            position: absolute;
+            top: 35%;
+            right: 42%;
+            transform: rotate(2deg);
+        }
+
+        .bmk-under2 h3::after {
+            content: "";
+            position: absolute;
+            right: 10%;
+            bottom: -5%;
+            width: 200px;
+            height: 3px;
+
+            background-image: linear-gradient(to right, rgba(255,255,255,0), white, rgba(255,255,255,0));
+        }
+        
+        .bmk-under2 p {
+            text-align: center;
+            color: #d9d9d9;
+            position: absolute;
+            top: 50%;
+            right: 42%;
+            transform: rotate(2deg);
+        }
+
+        .bmk-under2 h3,
+        .bmk-under2 p {
+            opacity: 0;
+            transition: opacity 0.8s ease 0.8s;
+        }
+
+        .bmk-under2:hover h3,
+        .bmk-under2:hover p {
+            opacity: 1;
+            transition: opacity 0.8s ease 0.8s;
+        }
+
+        /*BOOKMARK 3*/
+        .bmk3 {
+            width: 100%;
+            height: 15vw;
+            
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .bmk3 .bmk-over3 {
+            width: 25%;
+            position: absolute;
+            z-index: 3;
+        }
+
+        .bmk3 .bmk-under3 {
+            position: absolute;
+            top: 0%;
+            left: -15%;
+            z-index: 2;
+            transition: 1s;
+        }
+
+        .bmk3 .bmk-under3 img {
+            width: 85.5%;
+        }
+
+        .bmk-under3::after {
+            content: url(./src/imagens/Seta1.svg);
+            position: absolute;
+            top: 36%;
+            left: 48%;
+            z-index: 10;
+        }
+
+        .bmk-under3:hover {
+            position: absolute;
+            top: -7%;
+            left: 15%;
+            transition: 2s;
+        }
+
+        .bmk-under3 h3 {
+            font-family: var(--fonte-decorative);
+            font-weight: bold;
+            font-size: 1.4vw;
+            text-align: center;
+            color: #d9d9d9;
+            position: absolute;
+            top: 35%;
+            left: 24.8%;
+            transform: rotate(-2deg);
+        }
+
+        .bmk-under3 h3::after {
+            content: "";
+            position: absolute;
+            left: 2.5%;
+            bottom: -8%;
+            width: 200px;
+            height: 3px;
+
+            background-image: linear-gradient(to right, rgba(255,255,255,0), white, rgba(255,255,255,0));
+        }
+        
+        .bmk-under3 p {
+            opacity: 0%;
+            font-family: var(--fonte-parágrafos);
+            font-weight: normal;
+            text-align: center;
+            color: #d9d9d9;
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: rotate(-2deg);
+        }
+
+        .bmk-under3 h3,
+        .bmk-under3 p {
+            opacity: 0;
+            transition: opacity 0.8s ease 0.8s;
+        }
+
+        .bmk-under3:hover h3,
+        .bmk-under3:hover p {
+            opacity: 1;
+            transition: opacity 0.8s ease 0.8s;
+        }
+/* SEÇÃO 2 - FIM */
     </style>
 </head>
 <body>
     <div>
         <div class="section2">
             <div class="bmk1">
-                <img class="bmk-over" src="./src/imagens/Porta_Bookmark1.png" alt="#">
-                <a href=""><img class="bmk-under" src="./src/imagens/bmkunder.png" alt="#"><br><p>VISITANTE</p></a>
+                <img class="bmk-over1" src="./src/imagens/Porta_Bookmark1.webp" alt="#">
+                <a href=""><div class="bmk-under1" ><img src="./src/imagens/Marca_Página_1.webp" alt="#">
+                <h3>Visitante</h3>
+                <p>Desvende o paranormal sem necessidade<br>de registro.</p>
+                </div></a>
+            </div>
+
+            <div class="bmk2">
+                <img class="bmk-over2" src="./src/imagens/Porta_Bookmark2.webp" alt="#">
+                <a href=""><div class="bmk-under2"><img src="./src/imagens/Marca_Página_2.webp" alt="#">
+                <h3>Assistir ao Vivo</h3>
+                <p>Acompanhe as transmissões dos episódios<br>em tempo real.</p>
+                </div></a>
+            </div>
+
+            <div class="bmk3">
+                <img class="bmk-over3" src="./src/imagens/Porta_Bookmark3.webp" alt="#">
+                <a href=""><div class="bmk-under3"><img src="./src/imagens/Marca_Página_3.webp" alt="#">
+                <h3>Comunidade</h3>
+                <p>Forme alianças na batalha contra o paranormal<br>através de nossa comunidade do Discord.</p>
+                </div></a>
             </div>
         </div>
     </div>
