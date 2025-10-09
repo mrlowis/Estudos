@@ -610,6 +610,7 @@ main {
 
 .bmk1 .bmk-under1 {
     position: absolute;
+    width: 80%;
     top: 0%;
     left: -15%;
     z-index: 2;
@@ -621,7 +622,12 @@ main {
 }
 
 .bmk-under1::after {
-    content: url(./src/imagens/Seta1.svg);
+    content: "";
+    background-image: url(./src/imagens/Seta1.svg);
+    background-size: 85%;
+    background-repeat: no-repeat;
+    width: 6%;
+    height: 23%;
     position: absolute;
     top: 36%;
     left: 48%;
@@ -643,14 +649,14 @@ main {
     color: #d9d9d9;
     position: absolute;
     top: 35%;
-    left: 30%;
+    left: 27%;
     transform: rotate(-2deg);
 }
 
 .bmk-under1 h3::after {
     content: "";
     position: absolute;
-    left: -15%;
+    left: -35%;
     bottom: -5%;
     width: 200px;
     height: 3px;
@@ -666,7 +672,7 @@ main {
     color: #d9d9d9;
     position: absolute;
     top: 50%;
-    left: 25%;
+    left: 19.5%;
     transform: rotate(-2deg);
 }
 
@@ -699,6 +705,7 @@ main {
 }
 
 .bmk2 .bmk-under2 {
+    width: 80%;
     position: absolute;
     top: 0%;
     right: -25.5%;
@@ -712,10 +719,15 @@ main {
 }
 
 .bmk-under2::after {
-    content: url(./src/imagens/Seta2.svg);
+    content: "";
+    background-image: url(./src/imagens/Seta2.svg);
+    background-size: 85%;
+    background-repeat: no-repeat;
+    width: 6%;
+    height: 23%;
     position: absolute;
-    top: 36%;
-    right: 62.5%;
+    top: 34.5%;
+    right: 61.5%;
     z-index: 10;
 }
 
@@ -734,14 +746,14 @@ main {
     color: #d9d9d9;
     position: absolute;
     top: 35%;
-    right: 42%;
+    right: 37.5%;
     transform: rotate(2deg);
 }
 
 .bmk-under2 h3::after {
     content: "";
     position: absolute;
-    right: 10%;
+    right: 3%;
     bottom: -5%;
     width: 200px;
     height: 3px;
@@ -754,7 +766,7 @@ main {
     color: #d9d9d9;
     position: absolute;
     top: 50%;
-    right: 42%;
+    right: 35.2%;
     transform: rotate(2deg);
 }
 
@@ -787,6 +799,7 @@ main {
 }
 
 .bmk3 .bmk-under3 {
+    width: 80%;
     position: absolute;
     top: 0%;
     left: -15%;
@@ -799,7 +812,12 @@ main {
 }
 
 .bmk-under3::after {
-    content: url(./src/imagens/Seta1.svg);
+    content: "";
+    background-image: url(./src/imagens/Seta1.svg);
+    background-size: 85%;
+    background-repeat: no-repeat;
+    width: 6%;
+    height: 23%;
     position: absolute;
     top: 36%;
     left: 48%;
@@ -821,15 +839,15 @@ main {
     color: #d9d9d9;
     position: absolute;
     top: 35%;
-    left: 24.8%;
+    left: 25%;
     transform: rotate(-2deg);
 }
 
 .bmk-under3 h3::after {
     content: "";
     position: absolute;
-    left: 2.5%;
-    bottom: -8%;
+    left: -12.5%;
+    bottom: -5%;
     width: 200px;
     height: 3px;
 
@@ -844,7 +862,7 @@ main {
     color: #d9d9d9;
     position: absolute;
     top: 50%;
-    left: 20%;
+    left: 17%;
     transform: rotate(-2deg);
 }
 
