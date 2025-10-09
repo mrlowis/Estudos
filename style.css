@@ -210,7 +210,7 @@ article {
 
 .title_container p {
     font-family: var(--fonte-parágrafos);
-    font-size: 1.5em;
+    font-size: 1.5vw;
     padding-top: 10px;
     color: white;
 }
@@ -235,7 +235,7 @@ article {
 .botao_visitante .entrar_como {
     position: absolute;
     top: 28%;
-    left: 14.5%;
+    left: 15%;
     z-index: 0;
 
     display: flex;
@@ -243,7 +243,7 @@ article {
     align-items: center;
 
     font-family: var(--fonte-parágrafos);
-    font-size: 1.2em;
+    font-size: 1.2vw;
     color: white;
     text-decoration: none;
 
@@ -255,8 +255,8 @@ article {
     content: "";
     position: absolute;
     bottom: 0%;
-    width: 200px;
-    height: 2.5px;
+    width: 13vw;
+    height: 0.2vw;
 
     background-image: linear-gradient(to right, rgba(255,255,255,0), white, rgba(255,255,255,0));
 }
@@ -658,7 +658,7 @@ main {
     left: -50%;
     bottom: -5%;
     width: 200%;
-    height: 3px;
+    height: 0.2vw;
 
     background-image: linear-gradient(to right, rgba(255,255,255,0), white, rgba(255,255,255,0));
 }
@@ -756,7 +756,7 @@ main {
     right: -50%;
     bottom: -5%;
     width: 200%;
-    height: 3px;
+    height: 0.2vw;
 
     background-image: linear-gradient(to right, rgba(255,255,255,0), white, rgba(255,255,255,0));
 }
@@ -853,7 +853,7 @@ main {
     left: -50%;
     bottom: -5%;
     width: 200%;
-    height: 3px;
+    height: 0.2vw;
 
     background-image: linear-gradient(to right, rgba(255,255,255,0), white, rgba(255,255,255,0));
 }
