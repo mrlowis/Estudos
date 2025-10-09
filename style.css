@@ -69,18 +69,17 @@ body {
 body::before {
     content: "";
     position: absolute;
-    top: 4%;
+    top: 100px;
     left: 5%;
     width: 90%;
     height: 90%;
 
     background-image: url(./src/imagens/Moldura_Topo.svg);
-    background-position: top center;
     background-repeat: no-repeat;
     background-attachment: local;
     background-size: contain;
 
-    z-index: 1;
+    z-index: 0;
 }
 
 /* Efeito de zoom no fundo 
@@ -226,8 +225,8 @@ article {
 
 .botao_visitante .paper-btn {
     display: block;
-    width: 20em;
-    padding-left: 12.5%;
+    width: 20vw;
+    padding-left: 12vw;
     position: relative;
 }
 
@@ -236,7 +235,7 @@ article {
 .botao_visitante .entrar_como {
     position: absolute;
     top: 28%;
-    left: 15.5%;
+    left: 14.5%;
     z-index: 0;
 
     display: flex;
@@ -649,16 +648,16 @@ main {
     color: #d9d9d9;
     position: absolute;
     top: 35%;
-    left: 27%;
+    left: 26%;
     transform: rotate(-2deg);
 }
 
 .bmk-under1 h3::after {
     content: "";
     position: absolute;
-    left: -35%;
+    left: -50%;
     bottom: -5%;
-    width: 200px;
+    width: 200%;
     height: 3px;
 
     background-image: linear-gradient(to right, rgba(255,255,255,0), white, rgba(255,255,255,0));
@@ -667,12 +666,13 @@ main {
 .bmk-under1 p {
     opacity: 0%;
     font-family: var(--fonte-parágrafos);
+    font-size: 1.2vw;
     font-weight: normal;
     text-align: center;
     color: #d9d9d9;
     position: absolute;
     top: 50%;
-    left: 19.5%;
+    left: 17%;
     transform: rotate(-2deg);
 }
 
@@ -753,20 +753,24 @@ main {
 .bmk-under2 h3::after {
     content: "";
     position: absolute;
-    right: 3%;
+    right: -50%;
     bottom: -5%;
-    width: 200px;
+    width: 200%;
     height: 3px;
 
     background-image: linear-gradient(to right, rgba(255,255,255,0), white, rgba(255,255,255,0));
 }
 
 .bmk-under2 p {
+    opacity: 0%;
+    font-family: var(--fonte-parágrafos);
+    font-size: 1.2vw;
+    font-weight: normal;
     text-align: center;
     color: #d9d9d9;
     position: absolute;
     top: 50%;
-    right: 35.2%;
+    right: 32%;
     transform: rotate(2deg);
 }
 
@@ -839,16 +843,16 @@ main {
     color: #d9d9d9;
     position: absolute;
     top: 35%;
-    left: 25%;
+    left: 23.5%;
     transform: rotate(-2deg);
 }
 
 .bmk-under3 h3::after {
     content: "";
     position: absolute;
-    left: -12.5%;
+    left: -50%;
     bottom: -5%;
-    width: 200px;
+    width: 200%;
     height: 3px;
 
     background-image: linear-gradient(to right, rgba(255,255,255,0), white, rgba(255,255,255,0));
@@ -857,12 +861,13 @@ main {
 .bmk-under3 p {
     opacity: 0%;
     font-family: var(--fonte-parágrafos);
+    font-size: 1.2vw;
     font-weight: normal;
     text-align: center;
     color: #d9d9d9;
     position: absolute;
     top: 50%;
-    left: 17%;
+    left: 14%;
     transform: rotate(-2deg);
 }
 
