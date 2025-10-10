@@ -168,14 +168,19 @@ nav {
 article {
     margin: auto;
     width: 100%;
-    height: 50vw;
+    height: 45vw;
     background-image: url(./src/imagens/nora_bg.png);
-    background-position: top center;
+    background-position: bottom center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: contain;
+    background-size: 80%;
+    transition-duration: 1s;
     position: relative;
     z-index: 0;
+}
+
+article:hover {
+    background-size: 75%;
 }
 
 .title_container {
@@ -222,7 +227,7 @@ article {
 .botao_visitante .paper-btn {
     display: block;
     width: 20vw;
-    padding-left: 12vw;
+    padding-left: 12.5vw;
     position: relative;
 }
 
@@ -231,7 +236,7 @@ article {
 .botao_visitante .entrar_como {
     position: absolute;
     top: 28%;
-    left: 15%;
+    left: 15.5%;
     z-index: 0;
 
     display: flex;
