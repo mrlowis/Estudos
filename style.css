@@ -287,11 +287,11 @@ main {
     width: 100%;
     margin: auto;
 
-    background-image: url(./src/imagens/bg-main.png);
-    background-position: center;
+    background-image: url(./src/imagens/bg-main2.png);
+    background-position: bottom center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: contain;
+    background-size: 80%;
     
     z-index: 2;
 }
