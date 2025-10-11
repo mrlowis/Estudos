@@ -38,7 +38,7 @@
 /* HTML e Body - fundo principal */
 html, body {
     height: fit-content;
-    background-image: linear-gradient(10deg, var(--cor1) 85%, #0E0B18, var(--cor2));
+    background-image: linear-gradient(10deg, #07050c, var(--cor1) 85%, #1A0C1C);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -288,10 +288,10 @@ main {
     margin: auto;
 
     background-image: url(./src/imagens/bg-main.png);
-    background-position: bottom center;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: contain;
     
     z-index: 2;
 }
